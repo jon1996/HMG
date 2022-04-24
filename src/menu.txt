@@ -1,0 +1,29 @@
+public void menu()
+	{
+		newIcon = new ImageIcon("C:\\Users\\Jonathan\\eclipse-workspace\\AssignmentJava\\src\\image\\copy_edit.png");
+		saveIcon = new ImageIcon("C:\\Users\\Jonathan\\eclipse-workspace\\AssignmentJava\\src\\image\\save_edit.png");
+		loadIcon = new ImageIcon("C:\\Users\\Jonathan\\eclipse-workspace\\AssignmentJava\\src\\image\\paste_edit.png");
+		exitIcon = new ImageIcon("C:\\Users\\Jonathan\\eclipse-workspace\\AssignmentJava\\src\\image\\delete_edit.png");
+		optionIcon = new ImageIcon("C:\\Users\\Jonathan\\eclipse-workspace\\AssignmentJava\\src\\image\\cut_edit.png");
+		
+		neew = new JMenuItem("New Game",newIcon);
+		save = new JMenuItem("Save Game",saveIcon);
+		load = new JMenuItem("Load Game",loadIcon);
+		exit = new JMenuItem("Exit",exitIcon);
+		option = new JMenuItem("Options",optionIcon);
+		neew.addActionListener(this);
+		save.addActionListener(this);
+		load.addActionListener(this);
+		exit.addActionListener(this);
+		option.addActionListener(this);
+		mb = new JMenuBar();
+		File = new JMenu("File");
+		Options = new JMenu("Options");
+		File.add(neew); File.add(save);File.add(load);File.add(exit);
+		Options.add(option);
+		mb.add(File);mb.add(Options);
+		add(mb);
+		
+		setJMenuBar(mb);
+		
+	}
